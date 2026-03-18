@@ -1,1 +1,273 @@
-index
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ec5b13",
+                        "background-light": "#f8f6f6",
+                        "background-dark": "#221610",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Public Sans', sans-serif; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+    </style>
+<title>FindAI - Intelligence News Portal</title>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 transition-colors duration-200">
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<!-- Top Navigation Bar -->
+<header class="sticky top-0 z-50 w-full border-b border-primary/10 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md px-4 md:px-10 lg:px-40 py-3">
+<div class="flex items-center justify-between gap-8 max-w-[1280px] mx-auto">
+<div class="flex items-center gap-8">
+<div class="flex items-center gap-2 text-primary">
+<span class="material-symbols-outlined text-3xl">deployed_code</span>
+<h2 class="text-xl font-bold leading-tight tracking-tight text-slate-900 dark:text-slate-100">FindAI</h2>
+</div>
+<nav class="hidden md:flex items-center gap-6">
+<a class="text-sm font-semibold hover:text-primary transition-colors" href="#">Home</a>
+<a class="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-primary" href="#">Popular</a>
+<a class="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-primary" href="#">Trending</a>
+</nav>
+</div>
+<div class="flex flex-1 justify-end gap-4 items-center">
+<label class="hidden sm:flex items-stretch min-w-40 max-w-64 h-10 rounded-xl bg-primary/5 dark:bg-primary/10 border border-primary/10">
+<div class="flex items-center justify-center pl-3 text-primary">
+<span class="material-symbols-outlined text-[20px]">search</span>
+</div>
+<input class="w-full bg-transparent border-none focus:ring-0 text-sm placeholder:text-slate-400 dark:placeholder:text-slate-500" placeholder="Search AI news..." type="text"/>
+</label>
+<button class="flex items-center justify-center gap-2 rounded-xl h-10 px-4 bg-primary text-white text-sm font-bold transition-transform active:scale-95">
+<span class="material-symbols-outlined text-[18px]">add_circle</span>
+<span class="hidden sm:inline">Create Post</span>
+</button>
+<div class="bg-primary/20 rounded-full p-0.5 border border-primary/20 cursor-pointer">
+<img alt="User Profile" class="size-8 rounded-full object-cover" data-alt="Professional user profile avatar photo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAXkauXOwPffUF18coJG09_F0OMWvJz6lDg72_21u2VQcjlgSZUl01kQt6UIkMwHSmWplw-FlfyZyaFkKZ9O7pAYIU7wUbODbg1DgHfFPAQyHiPKrHGCzUz7wusNkpMymydyPGmLXK6QMFiyz8ltsgsS_boEKYK_n423gGSdQRgbywkAsAa-Bgc040L6mtVyHKvX38gpYwjTmoxgEb4q5ebKI3IB87gSNp_fs3AHGrSSQdRG1_ph8zcYnqtR9Ki5Qmp-A0zSfUtB9I"/>
+</div>
+</div>
+</div>
+</header>
+<!-- Main Content Grid -->
+<main class="flex-1 px-4 md:px-10 lg:px-40 py-6 max-w-[1440px] mx-auto w-full">
+<!-- Category Tabs & Brand Filters -->
+<div class="flex flex-col gap-6 mb-8">
+<div class="flex flex-wrap gap-2 items-center">
+<span class="text-xs font-bold uppercase tracking-widest text-primary mr-2">Top Brands:</span>
+<div class="flex gap-2 overflow-x-auto no-scrollbar pb-2 sm:pb-0">
+<button class="flex h-9 shrink-0 items-center justify-center gap-2 rounded-full bg-primary/10 hover:bg-primary/20 px-4 border border-primary/10 text-primary transition-all">
+<span class="text-sm font-semibold">OpenAI</span>
+</button>
+<button class="flex h-9 shrink-0 items-center justify-center gap-2 rounded-full bg-slate-100 dark:bg-slate-800 hover:bg-primary/10 px-4 text-slate-700 dark:text-slate-300 transition-all">
+<span class="text-sm font-semibold">Google</span>
+</button>
+<button class="flex h-9 shrink-0 items-center justify-center gap-2 rounded-full bg-slate-100 dark:bg-slate-800 hover:bg-primary/10 px-4 text-slate-700 dark:text-slate-300 transition-all">
+<span class="text-sm font-semibold">Microsoft</span>
+</button>
+<button class="flex h-9 shrink-0 items-center justify-center gap-2 rounded-full bg-slate-100 dark:bg-slate-800 hover:bg-primary/10 px-4 text-slate-700 dark:text-slate-300 transition-all">
+<span class="text-sm font-semibold">Meta</span>
+</button>
+</div>
+</div>
+<div class="border-b border-slate-200 dark:border-slate-800">
+<div class="flex gap-8 overflow-x-auto">
+<a class="flex flex-col items-center border-b-2 border-primary text-primary pb-3 font-bold" href="#">
+<span class="whitespace-nowrap">All News</span>
+</a>
+<a class="flex flex-col items-center border-b-2 border-transparent text-slate-500 dark:text-slate-400 hover:text-primary pb-3 font-medium transition-colors" href="#">
+<span class="whitespace-nowrap">Big Tech</span>
+</a>
+<a class="flex flex-col items-center border-b-2 border-transparent text-slate-500 dark:text-slate-400 hover:text-primary pb-3 font-medium transition-colors" href="#">
+<span class="whitespace-nowrap">Research</span>
+</a>
+<a class="flex flex-col items-center border-b-2 border-transparent text-slate-500 dark:text-slate-400 hover:text-primary pb-3 font-medium transition-colors" href="#">
+<span class="whitespace-nowrap">Ethics</span>
+</a>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+<!-- Main Editorial Feed -->
+<div class="lg:col-span-8 space-y-8">
+<!-- Featured Hero Article -->
+<article class="group cursor-pointer">
+<div class="relative aspect-video w-full overflow-hidden rounded-xl bg-slate-200 mb-4">
+<img alt="AI Research" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Futuristic neural network visualization with bright orange glows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAlhRYUavsdBdtAq7FgB0JMMHDR-9m6Qg8i4Zq_HDKQvMl73_hVnNC3Ls39sOkn0kJTEvE6ZMhYXpHd5cfEIeLpTqe9v36pE6Y5UpOzLWHhVMz1jYjYMI4ujtVw4D1Ks1_3EtH5mQqY-mb6uAudVuAWBml9GfkL2O5hsUCKAhUJHrn9zg7X0iDgYWbJk36oTHW5g0sGjH-ugO8AvdvViwt79ZvmhOMqh7M-NCa1f3TE4OEIo7U00wa-RgbJVM_Om8OggZBVOr297mE"/>
+<div class="absolute top-4 left-4">
+<span class="bg-primary px-3 py-1 rounded text-white text-[10px] font-black uppercase tracking-widest">Featured Report</span>
+</div>
+</div>
+<h1 class="text-2xl md:text-4xl font-black leading-tight mb-3 group-hover:text-primary transition-colors">The Future of AGI: OpenAI's Next Leap in Autonomous Agents</h1>
+<p class="text-slate-600 dark:text-slate-400 text-base md:text-lg leading-relaxed mb-4">
+                                As major players announce new breakthroughs in multi-modal capabilities, the industry is pivoting from simple chatbots to fully autonomous digital agents capable of complex reasoning and long-term planning.
+                            </p>
+<div class="flex items-center gap-4 text-sm text-slate-500">
+<div class="flex items-center gap-1.5 font-bold text-slate-900 dark:text-slate-100">
+<div class="size-6 rounded-full bg-primary/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-[14px]">person</span>
+</div>
+                                    Sarah Chen
+                                </div>
+<span class="text-slate-300 dark:text-slate-700">•</span>
+<span>12 min read</span>
+<span class="text-slate-300 dark:text-slate-700">•</span>
+<span>2 hours ago</span>
+</div>
+</article>
+<hr class="border-slate-200 dark:border-slate-800"/>
+<!-- Regular Article List -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<!-- Article 2 -->
+<article class="flex flex-col gap-3 group">
+<div class="relative aspect-[16/10] overflow-hidden rounded-lg bg-slate-100">
+<img alt="Robotics" class="h-full w-full object-cover group-hover:scale-105 transition-transform" data-alt="Modern robotic hand holding a delicate circuit board" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJZr0nyPXJz1iG_Vp11fsadX-Hhs8DiGIvahQJYJFoSJzd1OKxucipkeiQsEbtfMsrLasvwNU_ySNXviBUOfijMphLm3NTnaxZ9VMM-HrpaEVbYJCxTsCQAh3ZKUASmS9_AZvgyzSkIMw3R2EK3Aiu6gBEynoT1EGWYf-0Kuum1rq1YiScYGPDK3etuMx7B369hCnQQRfTzSADcsffnqxC3yURdxiV2FkoavxNEEW2OxB5jKanb1CNCzrhfsXHqHHQWUS1lC6rR5c"/>
+</div>
+<span class="text-xs font-bold text-primary uppercase">Hardware</span>
+<h3 class="text-xl font-bold leading-snug group-hover:text-primary transition-colors">NVIDIA's Blackwell GPU: Redefining the Speed of LLM Training</h3>
+<p class="text-sm text-slate-600 dark:text-slate-400 line-clamp-2">How the latest architecture is slashing costs and energy consumption for the next generation of models.</p>
+</article>
+<!-- Article 3 -->
+<article class="flex flex-col gap-3 group">
+<div class="relative aspect-[16/10] overflow-hidden rounded-lg bg-slate-100">
+<img alt="AI in Med" class="h-full w-full object-cover group-hover:scale-105 transition-transform" data-alt="Abstract visualization of medical data being analyzed by AI" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDxK6xrue_Nzg6B2GQR7PM_yhebNLbfHef0FGj7o3x-MC3MiE1f5xer8nzFrrTU50kPBvsgRZRpo9-kOOF-jX1S1BfnR99kbuk8CMMfnXEX0IqvRRsqPE8xp4yHqblseEqXkBxGoEJVCnzbRiwqfob-xtzYNxjInzG5Iy-hPh4q2_HAVOman0oTv7UDMqOOk13O4f2R1ZCmzZb3NCsMBS3UMnGeI1VPvfB-yT_t-QDXlcMTmnr6sCLNSAaSdDmq0qnzmS9jinKtcwU"/>
+</div>
+<span class="text-xs font-bold text-primary uppercase">Healthcare</span>
+<h3 class="text-xl font-bold leading-snug group-hover:text-primary transition-colors">Google Med-Gemini Achieves Human-Level Performance in Diagnostics</h3>
+<p class="text-sm text-slate-600 dark:text-slate-400 line-clamp-2">A landmark study shows AI outperforming specialists in early-stage oncology detection using multi-modal data.</p>
+</article>
+</div>
+</div>
+<!-- Sidebar Section -->
+<aside class="lg:col-span-4 space-y-10">
+<!-- FindAI TV Section -->
+<section class="bg-slate-100 dark:bg-slate-900/50 rounded-2xl p-6 border border-primary/5">
+<div class="flex items-center justify-between mb-6">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">live_tv</span>
+<h2 class="text-lg font-black uppercase tracking-tight">FindAI TV</h2>
+</div>
+<span class="flex items-center gap-1 text-[10px] font-bold bg-red-600 text-white px-2 py-0.5 rounded-full animate-pulse">
+<span class="size-1.5 bg-white rounded-full"></span> LIVE
+                                </span>
+</div>
+<div class="space-y-6">
+<!-- Video 1 (Main) -->
+<div class="relative aspect-video rounded-xl overflow-hidden group cursor-pointer">
+<img alt="Broadcast" class="h-full w-full object-cover" data-alt="High tech studio set with digital screens for news broadcast" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDBgadDF4Qu9p84JrKg2v-CTNDpHwHzFXOjxJkRhyDB4KyV5GEop-JpnF9RI2nPf0DRCDR_gB5XvaB8LDkN_GS7npnIPId0EpFTePihxXad56WZkIbGxFf9uWy4sTaAOG6ESJxHz33Exi0fr8rKuCumW4pvCqxzG-w2wakfPQ4wkK4cOevecMfmDEruABKz_xuLXy1Y3xfjBmhiAvwepsqyOMe8VK4vZlNsV8IHcKmaJkw94egeCFGd8mIcOFxCyegZ8UFeuTYfdEI"/>
+<div class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-white text-5xl">play_circle</span>
+</div>
+<div class="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-black/80 to-transparent">
+<p class="text-white text-sm font-bold leading-tight">Weekly Wrap-up: Top 5 AI stories this week</p>
+</div>
+</div>
+<!-- Mini Video Feed -->
+<div class="space-y-4">
+<div class="flex gap-3 group cursor-pointer">
+<div class="relative w-24 h-16 rounded-lg overflow-hidden shrink-0">
+<img alt="Tech" class="h-full w-full object-cover" data-alt="Modern laptop on a clean wooden desk" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBXWKzZEWb4ZolOzn3FzjiU372MLpMcl2I5-4P2uIMj1DImIqJtRLsuyw0GnY-bZKw-rxdSTtA_Bot3tm4Nh3fMB6Qa8HMTOLP7XyvjRMA4PEJQdPw8nBKImrwqPN73QmSmrQNGm3FnoZDwy1VSoCy3IlUka8eZvsADOgVtiVAs7NrH9cAyXAlfm2zCGjdfVWNHSQga5q-HwoaVC2IuoJ5ewfhugdxgrVpbDmanDcxy6f5FpXBz6XcBjGmrGruk-8HMBh1Efg4iAVY"/>
+<div class="absolute inset-0 flex items-center justify-center bg-black/20 group-hover:bg-black/40">
+<span class="material-symbols-outlined text-white text-xs">play_arrow</span>
+</div>
+</div>
+<div>
+<h4 class="text-xs font-bold group-hover:text-primary leading-snug">Interview: Sam Altman on AGI safety</h4>
+<span class="text-[10px] text-slate-500 font-medium">4:12 • 28k views</span>
+</div>
+</div>
+<div class="flex gap-3 group cursor-pointer">
+<div class="relative w-24 h-16 rounded-lg overflow-hidden shrink-0">
+<img alt="Coding" class="h-full w-full object-cover" data-alt="Close up of computer code on a dark screen" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB3F-JNX84vzD9_k60RO3GkcMRIf7PUMmD2HJrHrS9mT6eFS3sDCKXVN_DLZWpne6gOIBV7Bpk3iM_LCPW-gKSFYesYCk02m-pfPVgGz1tMFNOrWo4f9mh4bHwjHFwazOgW3fFypKxQvfeSEVG25t4wrVvJXnUy7e20wkn0QNcmiJ3rqXRsJrWgB6DR8EKN9_kgL-XbfU1Jut6S6U6508-TcB7DF64wa3rKzFLt1sA8ru_QsLJz1I_f875SGEp4pKOb_Cru0Q2jqtI"/>
+<div class="absolute inset-0 flex items-center justify-center bg-black/20 group-hover:bg-black/40">
+<span class="material-symbols-outlined text-white text-xs">play_arrow</span>
+</div>
+</div>
+<div>
+<h4 class="text-xs font-bold group-hover:text-primary leading-snug">GitHub Copilot's new Workspace feature</h4>
+<span class="text-[10px] text-slate-500 font-medium">6:45 • 15k views</span>
+</div>
+</div>
+</div>
+</div>
+<button class="w-full mt-6 py-2 text-xs font-bold text-primary border border-primary/20 rounded-lg hover:bg-primary hover:text-white transition-all">
+                                View Broadcast Schedule
+                            </button>
+</section>
+<!-- Big Tech Pulse -->
+<section>
+<h2 class="text-lg font-black uppercase tracking-tight mb-6 border-l-4 border-primary pl-3">Big Tech Pulse</h2>
+<div class="space-y-4">
+<div class="p-4 rounded-xl border border-slate-200 dark:border-slate-800 hover:border-primary/30 transition-colors bg-background-light dark:bg-background-dark shadow-sm">
+<div class="flex items-center justify-between mb-2">
+<span class="text-[10px] font-black tracking-widest text-slate-400 uppercase">Microsoft</span>
+<span class="text-[10px] font-bold text-green-500">+2.4% Today</span>
+</div>
+<h4 class="font-bold text-sm mb-1">Expanding Azure AI footprint in Europe with $3B investment</h4>
+<p class="text-xs text-slate-500 line-clamp-2">New data centers will power specialized LLMs for enterprise privacy...</p>
+</div>
+<div class="p-4 rounded-xl border border-slate-200 dark:border-slate-800 hover:border-primary/30 transition-colors bg-background-light dark:bg-background-dark shadow-sm">
+<div class="flex items-center justify-between mb-2">
+<span class="text-[10px] font-black tracking-widest text-slate-400 uppercase">Meta</span>
+<span class="text-[10px] font-bold text-primary">Trending Now</span>
+</div>
+<h4 class="font-bold text-sm mb-1">Llama 4: Rumored training scale reaches 1M H100s</h4>
+<p class="text-xs text-slate-500 line-clamp-2">Zuckerberg confirms the next generation of open-source models will set new benchmarks...</p>
+</div>
+</div>
+</section>
+<!-- Newsletter -->
+<section class="bg-primary/10 rounded-2xl p-6 border border-primary/20">
+<h3 class="font-black text-xl mb-2">Stay Ahead of AI</h3>
+<p class="text-sm text-slate-600 dark:text-slate-400 mb-4">Get the weekly briefing on the tech that's changing the world.</p>
+<div class="flex flex-col gap-2">
+<input class="bg-background-light dark:bg-background-dark border-slate-200 dark:border-slate-800 rounded-lg text-sm focus:ring-primary focus:border-primary" placeholder="you@company.com" type="email"/>
+<button class="bg-primary text-white py-2 rounded-lg font-bold text-sm">Join 50,000+ Readers</button>
+</div>
+</section>
+</aside>
+</div>
+</main>
+<!-- Simple Footer -->
+<footer class="border-t border-slate-200 dark:border-slate-800 px-10 py-10 mt-10">
+<div class="max-w-[1280px] mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+<div class="flex items-center gap-2 text-primary opacity-50 grayscale hover:grayscale-0 transition-all cursor-pointer">
+<span class="material-symbols-outlined text-2xl">deployed_code</span>
+<h2 class="text-lg font-bold">FindAI</h2>
+</div>
+<div class="flex gap-8 text-sm text-slate-500 font-medium">
+<a class="hover:text-primary" href="#">About</a>
+<a class="hover:text-primary" href="#">Advertising</a>
+<a class="hover:text-primary" href="#">Privacy</a>
+<a class="hover:text-primary" href="#">Contact</a>
+</div>
+<div class="flex gap-4">
+<button class="size-8 rounded-full border border-slate-200 dark:border-slate-800 flex items-center justify-center text-slate-400 hover:text-primary hover:border-primary transition-all">
+<span class="material-symbols-outlined text-sm">public</span>
+</button>
+<button class="size-8 rounded-full border border-slate-200 dark:border-slate-800 flex items-center justify-center text-slate-400 hover:text-primary hover:border-primary transition-all">
+<span class="material-symbols-outlined text-sm">rss_feed</span>
+</button>
+</div>
+</div>
+<p class="text-center text-[10px] text-slate-400 mt-10 font-bold tracking-widest uppercase">© 2024 FindAI Media Group. All rights reserved.</p>
+</footer>
+</div>
+</div>
+</body></html>
